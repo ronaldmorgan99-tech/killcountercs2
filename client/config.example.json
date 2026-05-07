@@ -1,0 +1,12 @@
+{
+  "player_name": "LocalPlayer",
+  "hotkey": "f9",
+  "crop": {
+    "top": 20,
+    "left": 75,
+    "width": 15,
+    "height": 15
+  },
+  "confidence_threshold": 0.7,
+  "api_url": "http://localhost:3000"
+}

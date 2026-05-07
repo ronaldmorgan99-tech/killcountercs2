@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+  --color-sky-400: #38bdf8;
+  --color-sky-500: #0ea5e9;
+  --color-active: #22c55e;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0B1120] text-slate-50 font-sans selection:bg-sky-500 selection:text-white overflow-hidden;
+  }
+}
+
+.glass {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.status-indicator {
+  @apply w-2.5 h-2.5 rounded-full inline-block mr-2;
+}
+
+.bg-active {
+  background-color: var(--color-active);
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+}
+
+.kill-row {
+  @apply border-b border-white/5 transition-all duration-300;
+}
+
+.kill-row:hover {
+  @apply bg-sky-400/10 transform scale-[1.01];
+}
+
+.badge-sky {
+  @apply bg-sky-500 text-white text-[10px] uppercase px-1.5 py-0.5 rounded font-bold tracking-wider mb-2 inline-block;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.5);
+}

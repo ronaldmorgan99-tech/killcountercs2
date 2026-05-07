@@ -1,0 +1,6 @@
+{
+  "name": "Aegis CS2 Kill Tracker",
+  "description": "AI-powered kill tracking for Counter-Strike 2 with a real-time tablet dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["vision", "real-time"]
+}
