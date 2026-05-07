@@ -1,7 +1,7 @@
 mss==6.1.0
 keyboard==0.13.5
-requests==2.31.0
-python-dotenv==1.0.1
-Pillow==10.2.0
+requests==2.33.0
+python-dotenv==1.2.2
+Pillow==12.2.0
 pytesseract==0.3.10
 pystray==0.19.5
