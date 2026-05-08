@@ -15,6 +15,20 @@ AEGIS is an AI-powered kill tracker for Counter-Strike 2. It uses a lightweight 
 8. [Advanced Features](#advanced-features)
 9. [Troubleshooting](#troubleshooting)
 
+
+## Contributor Workflow Documents
+These files work together as the project workflow control system:
+
+1. `AGENTS.md` (repo root) — contributor workflow contract (planning, diff size, validation standards).
+2. `README.md` (this file) — primary runbook for setup, execution, deployment verification, and troubleshooting.
+3. `.github/pull_request_template.md` — standard PR summary/checklist format.
+4. `.github/copilot-instructions.md` — AI-assisted coding expectations aligned to AGENTS + README.
+5. `.github/branch-protection.md` — merge requirements and documentation gates.
+6. `.github/instructions/frontend.instructions.md` — frontend-specific workflow, including the System Health replacement plan.
+7. `.github/instructions/backend.instructions.md` — backend-specific workflow and API/event compatibility guidance.
+
+When updating one workflow document, review the others and keep references synchronized.
+
 ## System Architecture
 - **Windows Agent (Python):** Runs locally on your CS2 machine. Listens for the hotkey, takes screenshot, performs local OCR, and pushes images to the dashboard.
 - **Backend & AI Integration (Node.js):** Hosts the HTTP API and interfaces with the Gemini API to analyze images using `gemma-4-vision`.
@@ -145,7 +159,7 @@ The executable will be generated at `client/dist/Aegis_Agent.exe`. Move this fil
 **Displays:**
 - **Total Kills:** The total number of confirmed eliminations in the current session.
 - **Agent Profile:** Displays the configured active `Player_Name`.
-- **System Health:** A progress bar that visually represents the connection stability and backend health (e.g., websocket connection state and system latency). When connected, it shows a stable percentage (e.g., 85%), indicating the server is running and ready for analysis requests.
+- **System Health (planned replacement):** The team plans to replace this with a **Model Activity** / **Detection Readiness** indicator so the card reflects live analysis pipeline state instead of a generic health percent. See `.github/instructions/frontend.instructions.md` and `.github/instructions/backend.instructions.md` for implementation workflow.
 - **Tablet Connection:** Shows active polling endpoint.
 
 ### 4. Live Detection Log (Main Area)
